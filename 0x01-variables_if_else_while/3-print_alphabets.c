@@ -20,8 +20,8 @@ while (x <= 'z')
 }
 while (X <= 'Z')
 {
-	putchar(Z);
-	Z++;
+	putchar(X);
+	X++;
 }
 putchar('\n');
 return (0);
