@@ -9,5 +9,5 @@
 
 void print_times_table(int n)
 {
-   int b;
+   int b = n + 1 ;
 }	
