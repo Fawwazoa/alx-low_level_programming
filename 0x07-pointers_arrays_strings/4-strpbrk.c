@@ -4,19 +4,20 @@
  * _strpbrk - searching a string for any of a set of bytes
  * @s: the string
  * @accept: set of bytes
+ *
  * Return: a pointer to the byte in s that matches one of the bytes in accept
  */
 char *_strpbrk(char *s, char *accept)
 {
-	unsigned int x;
-	unsigned int y;
+	unsigned int i;
+	unsigned int j;
 
-	for (x = 0; s[y] != '\0'; x++)
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (y = 0; accept[y] != '\0'; y++)
+		for (j = 0; accept[j] != '\0'; j++)
 		{
-			if (s[x] == accept[y])
-				return (&s[x]);
+			if (s[i] == accept[j])
+				return (&s[i]);
 		}
 	}
 	return (NULL);
