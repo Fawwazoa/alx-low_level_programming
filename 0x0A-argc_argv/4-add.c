@@ -1,66 +1,35 @@
 #include <stdio.h>
-#include <ctype.h>
 #include <stdlib.h>
+#include <ctype.h>
 #include <string.h>
-
 /**
- * StrIntCheck - Check whether char is a digit(int)
- * @str: array of characters
+ * main - entry point
+ * @argc: character
+ * @argv: character
  *
- *
- * Return: 0 if success, 1 if fail
- */
-int StrIntCheck(const char *str)
-{
-	int idx; /* INDEX OF CHARACTER IN ARRAY (STRING) */
-	int len = strlen(str); /* LENGTH OF THE STRING */
-
-	for (idx = 0; idx < len; idx++)
-	{
-		if (!isdigit((char)str[idx])) /* IS IT A DIGIT? */
-		{
-			return (0);
-		}
-	}
-	return (1);
-}
-
-/**
- * main - Adds positive numbers
- * @argc: argument count
- * @argv: argument vector
- *
- *
- * Return: Always 0 (Success)
+ * Description: - adding positive numbers
+ * Return: - 0 if no number padded, 1 if so
  */
 int main(int argc, char *argv[])
 {
-	int temp; /* TEMPORARILY HOLDS THE ARGUMENT VECTOR */
-	int sum = 0; /* SUM OF ARGUMENT VECTORS */
-	int idx2 = 1; /* INDEX IN ARRAY */
+	int sum, i, j;
 
-	/*No arguments passed, print 0 followed by a new line*/
-	if (argc == 1) {
-		printf("%d\n", sum);
-		return (0);
-	}
-	else
+	sum = 0;
+	if (argc != 1)
 	{
-		while (idx2 < argc)
+		for (i = 1; i < argc; i++)
 		{
-			if (StrIntCheck(argv[idx2]))
+			for (j = 0; j < (int)strlen(argv[i]); j++)
 			{
-				temp = atoi(argv[idx2]); /* CONVERT ARGV TO INT */
-				sum += temp;
+				if (!isdigit(argv[i][j]))
+				{
+					printf("Error\n");
+					return (1);
+				}
 			}
-			else
-			{
-				printf("Error\n");
-				return (1);
-			}
-			idx2++;
+			sum += atoi(argv[i]);
 		}
-		printf("%d\n", sum);
 	}
+	printf("%d\n", sum);
 	return (0);
 }
