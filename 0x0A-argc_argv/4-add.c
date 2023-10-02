@@ -7,6 +7,7 @@
  * StrIntCheck - Check whether char is a digit(int)
  * @str: array of characters
  *
+ *
  * Return: 0 if success, 1 if fail
  */
 int StrIntCheck(const char *str)
@@ -28,6 +29,7 @@ int StrIntCheck(const char *str)
  * main - Adds positive numbers
  * @argc: argument count
  * @argv: argument vector
+ *
  *
  * Return: Always 0 (Success)
  */
