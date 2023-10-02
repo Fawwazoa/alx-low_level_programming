@@ -1,3 +1,4 @@
+#include "main.h"
 /*
  * _isupper - uppercase letter
  * @c: ASCII code

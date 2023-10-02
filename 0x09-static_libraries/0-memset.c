@@ -1,3 +1,6 @@
+#include "main.h"
+
+
 /**
  * _memset - _memset
  * @s: char
