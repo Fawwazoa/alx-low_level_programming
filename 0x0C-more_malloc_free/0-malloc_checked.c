@@ -1,17 +1,21 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
- * *malloc_checked - allocates memory using malloc
- * @b: number of bytes to allocate
+ * malloc_checked - Entry point
+ *@b: string we need to duplicate
  *
- * Return: a pointer to allocated memory
+ * Return: a pointer to the allocate memory
  */
 void *malloc_checked(unsigned int b)
 {
-	char *i;
+	void *p = NULL;
 
-	i = malloc(b);
-	if (i ==w NULL)
+	p = malloc(b);
+	if (p == NULL)
+	{
 		exit(98);
-	return (i);
+	}
+	return (p);
 }
