@@ -3,13 +3,14 @@
 #include "lists.h"
 
 /**
- * insert_dnodeint_at_index - adds node at a given posistion
+ * insert_dnodeint_at_index - adds node at a given position of a dlistint_t list.
  * @h: pointer to the first element of the list
  * @idx:index
  * @n:number
- * Return: the pointer to a new node at the beginning of a dlistint_t list
+ * Return: the pointer to a new node at a given position of a dlistint_t list
  */
-dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
+dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
+{
 	dlistint_t *temp = NULL;
 	dlistint_t *temp2 = NULL;
 	dlistint_t *temp3 = NULL;
